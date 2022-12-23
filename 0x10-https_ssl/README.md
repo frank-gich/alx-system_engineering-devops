@@ -1,6 +1,4 @@
-# 0x10. HTTPS SSL
-
-## Table of contents
+ Table of contents
 Files | Description
 ----- | -----------
 [0-https_abc](./0-https_abc) | What is HTTPS?, Why do you need HTTPS?, You want to setup HTTPS on your website, where shall you place the certificate?
