@@ -30,7 +30,7 @@ def count_words(subreddit, word_list, word_count=[], page_after=None):
                     i += 1
 
             if r.json()['data']['after'] is not None:
-             count_words(subreddit, word_list,
+                count_words(subreddit, word_list,
                             word_count, r.json()['data']['after'])
     else:
         url = ('https://www.reddit.com/r/{}/hot.json?after={}'
@@ -48,7 +48,7 @@ def count_words(subreddit, word_list, word_count=[], page_after=None):
                             word_count[i] += 1
                     i += 1
             if r.json()['data']['after'] is not None:
-             count_words(subreddit, word_list,
+                count_words(subreddit, word_list,
                             word_count, r.json()['data']['after'])
             else:
                 dicto = {}
