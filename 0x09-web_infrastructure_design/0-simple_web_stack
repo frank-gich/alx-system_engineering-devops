@@ -34,6 +34,40 @@ User (Browser)
    v
 User's Browser displays website
 
+Component Roles
+Server:
+A physical or virtual machine that hosts all the components (web server, app server, code, database) and responds to incoming requests.
+
+Domain Name (foobar.com):
+A human-friendly address mapped to your server’s IP. Makes it easier to remember than an IP address.
+
+DNS Record for www in www.foobar.com:
+This is a CNAME or A record depending on configuration. In this setup, www is usually an A record pointing directly to 8.8.8.8.
+
+Web Server (Nginx):
+Receives HTTP requests from users and serves static files directly, or forwards dynamic requests to the application server.
+
+Application Server:
+Runs your application code (PHP, Python, Ruby, etc.), processes business logic, and handles dynamic content generation.
+
+Application Files:
+Your codebase — HTML templates, backend scripts, configuration, and assets that define how the website works.
+
+Database (MySQL):
+Stores and retrieves structured data for the application (e.g., user accounts, blog posts).
+
+Communication with the User’s Computer:
+Uses HTTP or HTTPS protocols over TCP/IP to deliver the content.
+
+Issues with This Infrastructure
+Single Point of Failure (SPOF):
+If the server fails, the entire website goes offline because everything is on one machine.
+
+Downtime During Maintenance:
+Deploying new code or restarting Nginx/app server causes temporary unavailability.
+
+Scalability Limits:
+Cannot handle large amounts of traffic — adding more visitors will overwhelm CPU, RAM, and network bandwidth.
 
 A user opens their browser and types:
 www.foobar.com
